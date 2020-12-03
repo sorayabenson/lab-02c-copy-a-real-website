@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -26,10 +28,12 @@
                     </section>
                     <section class="right-menu">
                         <a>Sign In</a>
-                        <a><img src="assets/hiclipart.com.png" alt="magnifying glass" width="25" height="25"></a>
-                        <a><img src="assets/lol.png" alt="lol badge" width="40" height="40"></a>
-                        <a><img src="assets/win.png" alt="win badge" width="40" height="40"></a>
-                        <a><img src="assets/trending.png" alt="trending badge" width="40" height="40"></a>
+                        <a><img src="assets/buzzfeed-magnify.png" alt="magnifying glass" width="25" height="25"></a>
+                        <div class=badge-container>
+                            <a class="badge lol"><img src="assets/lol.png" alt="lol badge" width="40" height="40"></a>
+                            <a class="badge win"><img src="assets/win.png" alt="win badge" width="40" height="40"></a>
+                            <a class="badge trending"><img src="assets/trending.png" alt="trending badge" width="40" height="40"></a>
+                        </div>
                     </section>
                 </nav>
             </div>
@@ -37,7 +41,7 @@
                 <img src="assets/trending-inverted.png" alt="trending inverted" width="25" height="25">
                 <a class="pop">Holiday Gift Guide</a>
                 <a class="pop">"Happiest Season"</a>
-                <a class="pop">Trending quizzes</a>
+                <a class="pop">Trending Quizzes</a>
                 <a class="pop">"The Undoing"</a>
                 <a class="pop">Coronavirus Coverage</a>
                 <img src="assets/trending-inverted.png" alt="trending inverted" width="25" height="25">
@@ -49,18 +53,19 @@
         <div class="main-container">
             <div class="left-main">
                 <article class="main-article">
-                    <div class="image"><img></div>
-                    <h1>headline</h1>
+                    <a class="main-article-image"><img src="assets/ep.png" alt="two happy photos of elliot page with wife" width="755px" height="auto"></a>
+                    <h1>Elliot Page's Wife Posted A Sweet Message Of Pride And Support After He Came Out As Trans</h1>
                 </article>
                 
                 <article class="small-article">
-                    <div class="image"><img></div>
-                    <div>
-                        <h2>headline</h2>
-                        <h3>copy</h3>
-                        <div>
-                            <button><img>author</button>
-                            <em>time</em>
+                    <div class="image"><img src="assets/kevin-home-alone.png" alt="Kevin heats doorknob with device."></div>
+                    <div class="small-article-text">
+                        <h2>I Finally Figured Out what The Heck That thing Was Kevin Used In "Home Alone" To Heat Up The Door Knob</h2>
+                        <h3>You probably haven't even thought about what it was until now.</h3>
+                        <div class="author-info">
+                            <img src="assets/author-photo.png" alt="Author Photo" width="30px" height="30px">
+                            <a>Crystal Ro</a>
+                            <a>• 7 hours ago</a>
                         </div>
                     </div>
                 </article>
@@ -68,14 +73,14 @@
 
             <div class="right-main">
                 <article class="news">
-                    <h3>buzzfeed news</h3>
-                    <article class="news-link">text here</article>
-                    <article class="news-link">text here</article>
-                    <article class="news-link">text here</article>
+                    <h4>BuzzFeedNews</h4>
+                    <h5 class="news-link">The CDC has changed its 14-day quarantine guidance to 7 days if people have a negative COVID-19 test result and no symptoms. ></h5>
+                    <h5 class="news-link">The UK is now the first Western country to approve a coronavirus vaccine. They will begin vaccinating members of the public next week. ></h5>
+                    <h5 class="news-link">A Black man trying to flag down authorities after a car crash was tased by sheriff’s deputies in California. ></h5>
                 </article>
 
                 <article class="advert">
-                    <img>
+                    <img src="http://placekitten.com/250/400">
                 </article>
             </div>
         </div>

@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
 html, body {
     width: 100%;
     height: 100%;
@@ -10,14 +9,16 @@ html, body {
     background: whitesmoke;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
+    
 }
 header {
     width: 100%;
     height: 100px;
     background: white;
     box-shadow: 0px 2px 2px #c7c7c730;
-    position: fixed;
+    position: sticky;
     top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,14 +63,45 @@ header {
 
 }
 .right-menu {
-    width: auto;
-    display: grid;
-    justify-content: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-row: 1fr;
-    margin: 5px;
     font-weight: bold;
+
+}
+.badge-container {
+    width: fit-content;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+.badge.lol {
+    grid-column: 1/8;
+    grid-row: 1;
+    z-index: 3;
+    
+}
+.badge.win {
+    grid-column: 7/15;
+    grid-row: 1;
+    z-index: 2;
+
+}
+.badge.trending {
+    grid-column: 14/22;
+    grid-row: 1;
+    z-index: 1;
+
+
+}
+.badge {
+    -webkit-filter: drop-shadow(1px 1px 0px #c7c7c790);
+    filter:         drop-shadow(1px 1px 0px #c7c7c790)
+
 }
 .popular-links {
     height: 35px;
@@ -84,6 +116,7 @@ header {
     color: red;
     font-weight: 800;
     font-size: 2rem;
+    pointer-events: none;
 
 }
 button {
@@ -95,47 +128,46 @@ button {
 
 main {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .main-container {
+    height: auto;
     width: 75%;
-    height: 86%;
-    position: relative;
-    top: 50px;
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     grid-template-columns: 4fr 2fr;
     border: red solid px;
-
 
 }
 
 .left-main {
-    height: 100%;
+    height: fit-content;
     width: 100%;
     display: grid;
+    align-items: top;
     grid-template-rows: 3fr 2fr;
     border: blue solid px;
     
 }
-
 .main-article {
-    height: auto;
-    width: auto;
+    height: fit-content;
+    width: fit-content;
     border: #c7c7c760 solid 1px;
     box-shadow: 0px 1px 1px #c7c7c730;
     margin: 5px;
     border-radius: 4px;
     background: white;
     color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr;
 }
+
 .small-article {
-    height: auto;
+    height: fit-content;
     width: auto;
     border: #c7c7c760 solid 1px;
     box-shadow: 0px 1px 1px #c7c7c730;
@@ -143,29 +175,53 @@ main {
     border-radius: 4px;
     background: white;
     color: black;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+}
+.small-article-text {
+    grid-template-columns: 1fr;
+    grid-row: 2fr 2fr 1fr;
+}
+.author-info {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    pointer-events: none;
 }
 .right-main {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     display: grid;
-    grid-template-rows: 2fr 3fr;
+    align-items: top;
+    grid-template-rows: 2fr 4fr;
     border: blue solid px;
 
 }
 .news {
-    height: auto;
+    height: fit-content;
     width: auto;
     border: #c7c7c760 solid 1px;
+    border-top: black solid 8px;
     box-shadow: 0px 1px 1px #c7c7c730;
     margin: 5px 5px 10px 15px;
     border-radius: 4px;
-    padding: 10px;
+    padding: 0px 15px;
     background: white;
     color: black;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 28% 29% 28%;
+
 
 }
+.news-link {
+    font-size: .9rem;
+}
 .advert {
-    height: auto;
+    height: fit-content;
     width: auto;
     border: #c7c7c760 solid 1px;
     box-shadow: 0px 1px 1px #c7c7c730;
@@ -173,10 +229,34 @@ main {
     border-radius: 4px;
     background: white;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 a:hover {
     color: rgb(37, 77, 255);
 }
-.border {
-    border: blue solid 2px;
+h1 {
+    padding: 0px 30px;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+h2 {
+    padding: 0px 20px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+h3 {
+    padding: 0px 20px;
+    font-size: 1em;
+    font-weight: 400;
+}
+h4 {
+    font-family: 'PT Serif', serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+h5 {
+    font-size: .9rem;
+    font-weight: 300;
 }
